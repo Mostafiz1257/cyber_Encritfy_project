@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encritfy - Secure Your Data</title>
+<link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Encritfy</h1>
+        <p>Your one-stop solution for secure encryption and decryption</p>
+    </div>
+</header>
+
+<!-- Grid Layout for Sections -->
+<div class="grid-container">
+    <div class="section">
+        <h2>Encryption</h2>
+        <div class="form-group">
+            <label for="encryptText">Text to Encrypt:</label>
+            <input type="text" id="encryptText" placeholder="Enter text to encrypt">
+        </div>
+        <div class="form-group">
+            <label for="encryptionType">Encryption Type:</label>
+            <select id="encryptionType">
+                <option value="additive">Additive</option>
+                <option value="multiplicative">Multiplicative</option>
+                <option value="affine">Affine</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="encryptKey">Encryption Key:</label>
+            <input type="text" id="encryptKey" placeholder="Enter key">
+        </div>
+     
+        <button id="encryptButton">Encrypt</button>
+        <div id="encryptedTextOutput"></div>
+    </div>
+
+    <div class="section">
+        <h2>Decryption</h2>
+        <div class="form-group">
+            <label for="decryptText">Text to Decrypt:</label>
+            <input type="text" id="decryptText" placeholder="Enter text to decrypt">
+        </div>
+        <div class="form-group">
+            <label for="decryptionType">Decryption Type:</label>
+            <select id="decryptionType">
+                <option value="additive">Additive</option>
+                <option value="multiplicative">Multiplicative</option>
+                <option value="affine">Affine</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="decryptKey">Decryption Key:</label>
+            <input type="text" id="decryptKey" placeholder="Enter key">
+        </div>
+      
+        <button id="decryptButton">Decrypt</button>
+        <div id="decryptedTextOutput"></div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 Encritfy. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script> 
+<script src="algorithms/affine.js"></script> 
+<script src="algorithms/additive.js"></script>
+<script src="algorithms/multiplicative.js"></script>
+</body>
+</html>
